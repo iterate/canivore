@@ -23,10 +23,12 @@
     <main></main>
     <script src="https://unpkg.com/elm-canvas@2.2/elm-canvas.js"></script>
     <script src="./app2.js"></script>
-    <script>
-      var app = Elm.Main2.init({ node: document.querySelector("main") });
-      // you can use ports and stuff here
-    </script>
     <audio controls src="canihonk.mp3" autoplay loop />
+    <script>
+      var audio = document.querySelector("audio");
+      audio.addEventListener("play", event => {
+        var app = Elm.Main2.init({ node: document.querySelector("main") });
+      });
+    </script>
   </body>
 </html>
