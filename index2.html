@@ -11,6 +11,11 @@
         width: 100% !important;
         height: 100% !important;
       }
+      audio {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
     </style>
     <title>HOOONK</title>
   </head>
@@ -22,5 +27,6 @@
       var app = Elm.Main2.init({ node: document.querySelector("main") });
       // you can use ports and stuff here
     </script>
+    <audio controls src="canihonk.mp3" autoplay loop />
   </body>
 </html>
